@@ -8,7 +8,7 @@
          "Group",
          "Telegram"         
       ],   
-   "repository": "https://github.com/DAXXTEAM/BanAllBot",
+   "repository": "https://github.com/botdev72/ban",
    "stack": "heroku-20",
    "addons": [
       {
@@ -67,7 +67,7 @@
    "formation": {
             "worker": {
                 "quantity": 1,
-                "size": "eco"
+                "size": "basic"
             }
         }
 }
