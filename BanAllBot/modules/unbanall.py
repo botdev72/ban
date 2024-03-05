@@ -2,7 +2,7 @@ from BanAllBot import app,BOT_ID,SUDO
 from pyrogram import filters,enums
 
 
-@app.on_message(filters.command("unbanall") & filters.user(SUDO))
+@app.on_message(filters.command("untagall") & filters.user(SUDO))
 async def unban_all(_,msg):
     chat_id=msg.chat.id   
     x = 0
@@ -14,7 +14,7 @@ async def unban_all(_,msg):
             banned_users.append(m.user.id)       
             try:
                     await app.unban_chat_member(chat_id,banned_users[x])
-                    await msg.reply_text(f"ᴜɴʙᴀɴɪɴɢ ᴀʟʟ ᴍᴄ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ {m.user.mention}")
+                    await msg.reply_text(f"untagall in this group {m.user.mention}")
                     x += 1
                                         
             except Exception:
